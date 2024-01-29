@@ -8,12 +8,12 @@
         <h1 class="mb-2">Loan Calculator</h1>
         <div class="row border-bottom border-2 my-3">
             <div class="col mb-3">
-                <form asp-controller="" asp-action="" method="post" class="loanForm">
+                <form asp-controller="Home" asp-action="MortgagePage" method="post" class="loanForm">
                     <div class="form-row">
                         <div class=" form-group col-12">
                             <label asp-for="Amount">Loan Amount:</label>
                        
-                            <input type="number" class="form-control"  min="1000" step="500"  asp-for="Amount" />
+                            <input type="number" class="form-control"  min="1000" step="500"  asp-for="Amount" onchange="updatePrincipal()" />
                         </div>
                         <div class=" form-group col-12">
                             <label asp-for="Term">Term:</label>
@@ -103,7 +103,7 @@
                 style: 'currency',
                 currency: 'USD',
             });
-            document.getElementById('totalPrincipal').innerHTML = formatter.format(document.getElementById('lamount').value);
+            document.getElementById('totalPrincipal').innerHTML = formatter.format(document.getElementById('Amount').value);
         }
     </script>
 }
