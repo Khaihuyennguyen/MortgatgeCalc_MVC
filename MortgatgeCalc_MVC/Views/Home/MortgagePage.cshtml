@@ -74,16 +74,19 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @* Add Code here *@
+                            @foreach (LoanPayment payment in Model.Payments)
+                            {
+                                
+                          
                             <tr>
-                                <td class="text-success">@* Add Code here *@</td>
-                                <td>@* Add Code here *@</td>
-                                <td>@* Add Code here *@</td>
-                                <td>@* Add Code here *@</td>
-                                <td>@* Add Code here *@</td>
-                                <td>@* Add Code here *@</td>
+                                <td class="text-success">@payment.Month</td>
+                                <td>@payment.Payment.ToString("C")</td>
+                                    <td>@payment.MonthlyPrincipal.ToString("C")</td>
+                                    <td>@payment.MonthlyInterest.ToString("C")</td>
+                                    <td>@payment.TotalInterest.ToString("C")</td>
+                                    <td>@payment.Balance.ToString("C")</td>
                             </tr>
-                            @* Add Code here *@
+                            }
                         </tbody>
                     </table>
                 </div>
