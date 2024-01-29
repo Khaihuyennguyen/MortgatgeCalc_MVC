@@ -34,26 +34,26 @@
                     <p>Your Monthly Payments</p>
                 </div>
                 <p id="payment">
-                    @* Add Code here *@
+                    @Model.Payment.ToString("C")
                 </p>
                 <div class="row">
                     <div class="col-6">
                         <label class="text-left">Total Principal</label>
                     </div>
                     <div class="col-6 text-right" id="totalPrincipal">
-                        @* Add Code here *@
+                        @Model.Amount.ToString("C")
                     </div>
                     <div class="col-6">
                         <label class="text-left">Total Interest</label>
                     </div>
                     <div class="col-6 text-right" id="totalInterest">
-                        @* Add Code here *@
+                        @Model.TotalInterest.ToString("C")
                     </div>
                     <div class="col-6">
                         <label class="text-left">Total Cost</label>
                     </div>
                     <div class="col-6 text-right" id="totalCost">
-                        @* Add Code here *@
+                        @Model.TotalCost.ToString("C")
                     </div>
                 </div>
             </div>

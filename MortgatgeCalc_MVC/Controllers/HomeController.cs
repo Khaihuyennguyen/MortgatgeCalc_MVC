@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using MortgatgeCalc_MVC.Helpers;
 using MortgatgeCalc_MVC.Models;
 
 namespace MortgatgeCalc_MVC.Controllers
@@ -26,10 +27,15 @@ namespace MortgatgeCalc_MVC.Controllers
 		}
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-        public IActionResult MortgagePage(Loan loan)
+        public IActionResult MortgagePage(Loan model)
         {
+			LoanHelper loanHelper = new LoanHelper();
 
-            return View();
+			Loan newLoan = loanHelper.GetPayments(model);
+
+
+
+            return View(newLoan);
         }
         public IActionResult Index()
 		{
