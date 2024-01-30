@@ -25,7 +25,7 @@ namespace MortgatgeCalc_MVC.Controllers
 			model.Term = 60;
 			return View(model);
 		}
-		[HttpPost]
+		[HttpPost] 
 		[ValidateAntiForgeryToken]
         public IActionResult MortgagePage(Loan model)
         {
