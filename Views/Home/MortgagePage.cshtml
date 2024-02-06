@@ -5,7 +5,7 @@
 
 <div class="card shadow-lg col-md-12">
     <div class="card-body">
-        <h1 class="mb-2">Loan Calculator</h1>
+        <h1 class="mb-2">Interest Calculator</h1>
         <div class="row border-bottom border-2 my-3">
             <div class="col mb-3">
                 <form asp-controller="Home" asp-action="MortgagePage" method="post" class="loanForm">
@@ -16,7 +16,7 @@
                             <input type="number" class="form-control"  min="1000" step="500"  asp-for="Amount" onchange="updatePrincipal()" />
                         </div>
                         <div class=" form-group col-12">
-                            <label asp-for="Term">Term:</label>
+                            <label asp-for="Term">Months(Term):</label>
                      
                             <input type="number" class="form-control" min="1" asp-for="Term" />
                         </div>
